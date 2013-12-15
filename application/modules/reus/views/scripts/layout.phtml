@@ -1,0 +1,32 @@
+<?php echo $this->doctype() ?>
+<html>
+<head>
+    <?php $this->headLink()
+        ->appendStylesheet('/css/bootstrap.css')
+        ->appendStylesheet('/css/styles.css')
+        ->appendStylesheet('/css/reus.css')
+    ?>
+    <?php echo $this->headLink() ?>
+    <?php echo $this->headTitle() ?>
+
+    <?php
+    $this->headScript()
+        ->appendFile('/js/jquery-2.0.3.js')
+//        ->appendFile('/js/jquery.form.js')
+        ->appendFile('/js/bootstrap.js')
+        ->appendFile('/js/global.js')
+        ->appendFile('/js/reus.js')
+?>
+</head>
+<body>
+
+<div class="container" id="container">
+    <?php echo $this->layout()->content ?>
+</div>
+
+<?php $this->headScript()->captureStart(); ?>
+gogogo();
+<?php $this->headScript()->captureEnd(); ?>
+<?php echo $this->headScript(); ?>
+</body>
+</html>
