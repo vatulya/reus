@@ -1,6 +1,36 @@
-<div class="game-title">Game Sudoku</div>
-<div class="game-board">
-    <div id="board" class="game-container" data-game="sudoku">
-        <?php echo $this->render('game/board.phtml'); ?>
-    </div>
-</div>
+<script>
+    var data = {
+        "nodes": [
+            {"name": "Blueberry"  , "row": 1, "col": 1},
+            {"name": "Dandelion"  , "row": 1, "col": 3},
+            {"name": "Apple Tree" , "row": 2, "col": 1},
+            {"name": "Strawberry" , "row": 2, "col": 2},
+            {"name": "Nightshade" , "row": 2, "col": 3},
+            {"name": "Pear tree"  , "row": 3, "col": 1},
+            {"name": "Cherry tree", "row": 3, "col": 2},
+            {"name": "Foxglove"   , "row": 3, "col": 3},
+            {"name": "Plum tree"  , "row": 4, "col": 2},
+            {"name": "Sunflower"  , "row": 4, "col": 3},
+            {"name": "Orange tree", "row": 5, "col": 2}
+        ],
+        "edges": [
+            {"src": "Blueberry", "dest": "Apple Tree"},
+            {"src": "Blueberry", "dest": "Strawberry"},
+            {"src": "Dandelion", "dest": "Strawberry"},
+            {"src": "Dandelion", "dest": "Nightshade"},
+            {"src": "Apple Tree", "dest": "Pear tree"},
+            {"src": "Apple Tree", "dest": "Cherry tree"},
+            {"src": "Strawberry", "dest": "Pear tree"},
+            {"src": "Strawberry", "dest": "Cherry tree"},
+            {"src": "Strawberry", "dest": "Plum tree"},
+            {"src": "Nightshade", "dest": "Foxglove"},
+            {"src": "Nightshade", "dest": "Plum tree"},
+            {"src": "Pear tree", "dest": "Orange tree"},
+            {"src": "Cherry tree", "dest": "Orange tree"},
+            {"src": "Foxglove", "dest": "Sunflower"},
+            {"src": "Foxglove", "dest": "Plum tree"}
+        ]
+    };
+</script>
+
+<canvas id="viewport" width="800" height="800"></canvas>

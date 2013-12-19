@@ -21,9 +21,7 @@ class Reus_IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        /** @var Application_Model_User $user */
-        $user = Application_Model_User::getInstance();
-        $user = $user->getById(1);
+        $a = 1;
     }
 
 }
